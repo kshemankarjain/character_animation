@@ -39,6 +39,8 @@ public class twostateanimationstatecontroller : MonoBehaviour
         if (leftpress && VelocityX >-currentmaxvelocity)
         {
             VelocityX -= Time.deltaTime * accelaration;
+           
+
         }
         if (rightpress && VelocityX < currentmaxvelocity)
         {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class playermovementfirst : MonoBehaviour
 {
+   
     public bool collid = false;
     private CharacterController characterController;
     [SerializeField] private float movementSpeed;
@@ -30,6 +31,7 @@ public class playermovementfirst : MonoBehaviour
 
     public spawnmanager Spawnmanager;
 
+
     void Start()
     {
         Time.timeScale = 1;
@@ -37,10 +39,11 @@ public class playermovementfirst : MonoBehaviour
         current_speed = movementSpeed;
         max_run_speed = current_speed * 5;
         SoundManagerScript.playsound("gamesound");
+        
 
     }
-    float current_speed;
-    float max_run_speed;
+    public float current_speed;
+   public float max_run_speed;
 
     void Update()
     {
@@ -79,6 +82,8 @@ public class playermovementfirst : MonoBehaviour
 
     private void HorizontalMovement()
     {
+        bool leftpress = Input.GetKey("a");
+        bool rightpress = Input.GetKey("d");
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -91,15 +96,17 @@ public class playermovementfirst : MonoBehaviour
         {
             if (current_speed <= max_run_speed) //acceleration
                 current_speed += Time.deltaTime * 5;
-          //  Debug.Log("Acceleration:" + current_speed);
-            Debug.Log("player is trying to run");
+          
         }
         else
         {
             if (current_speed >= movementSpeed)
                 current_speed -= Time.deltaTime * 5;
            // Debug.Log("deceleration:" + current_speed);
-            Debug.Log("player is trying stopped");
+        }
+        if (rightpress || leftpress)
+        {
+            current_speed -= Time.deltaTime * 5;
         }
         characterController.Move(movementDirection * current_speed * Time.deltaTime);
        
