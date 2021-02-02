@@ -11,22 +11,23 @@ public class object_move_forward : MonoBehaviour
 
     float time = 1.0f;//seconds
     public float speed = 1.0f;
-    private void Awake()
-    {
-        initial_object_position = transform.localPosition;
-
-    }
+  
     void Start()
     {
-        
+        //initial_object_position = transform.localPosition;
+
     }
 
     void Update()
     {
        // transform.Translate(direction * (Time.deltaTime * (distance / time)));
-
-        float step = speed * Time.deltaTime; // calculate distance to move
-        transform.localPosition = Vector3.MoveTowards(transform.localPosition, target.localPosition, step);
+       if(pause_car_movement== false)
+        {
+            float step = speed * Time.deltaTime; // calculate distance to move
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        }
+      
+      
 
         //// Check if the position of the cube and sphere are approximately equal.
         //if (Vector3.Distance(transform.position, target.position) < 0.001f)
@@ -35,13 +36,15 @@ public class object_move_forward : MonoBehaviour
         //    target.position *= -1.0f;
         //}
     }
-
+    public bool pause_car_movement = false;
     public void reset_object_position()
     {
-         transform.localPosition = initial_object_position;
-        Debug.Log( " initial position : " + initial_object_position + "  new position: " + transform.localPosition);
-        float step = speed * Time.deltaTime; // calculate distance to move
-        transform.localPosition = Vector3.MoveTowards(transform.localPosition, target.localPosition, step);
+       
+        float z_pos = transform.position.z +(- 5f);
+         transform.position = new Vector3(transform.position.x,transform.position.y,z_pos);
+        Debug.Log("  new position: " + transform.position);
+        //*float step = speed * Time.deltaTime;* calculate distance to move
+        pause_car_movement = false;
 
     }
 }
