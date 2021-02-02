@@ -18,7 +18,7 @@ Project is created with:
 
 
 ## Gif example
-![](https://github.com/kshemankarjain/character_animation/blob/main/Assets/image%20and%20video%20examples/vdo.mp4)
+![](https://github.com/kshemankarjain/character_animation/blob/main/Assets/image%20and%20video%20examples/converted.gif)
 
 <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="40" height="40" />
 
