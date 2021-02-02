@@ -12,12 +12,11 @@ Project is created with:
 * unity 3D v2020.1.0a12
 	
 ## Example scenes and pictures 
-Assets/image and video examples/character_animation - SampleScene - PC, Mac & Linux Standalone - Unity 2020.1.0a12.1360 Personal [PREVIEW PACKAGES IN USE] _DX11_ 02-02-2021 13_30_01.png
-Assets/image and video examples/character_animation - SampleScene - PC, Mac & Linux Standalone - Unity 2020.1.0a12.1360 Personal [PREVIEW PACKAGES IN USE] _DX11_ 02-02-2021 13_30_04 (1).png
-Assets/image and video examples/character_animation - SampleScene - PC, Mac & Linux Standalone - Unity 2020.1.0a12.1360 Personal [PREVIEW PACKAGES IN USE] _DX11_ 02-02-2021 13_30_07.png
-
+![](https://github.com/kshemankarjain/character_animation/blob/main/Assets/image%20and%20video%20examples/1.png)
 ## Gif example
-Assets/image and video examples/character_animation - SampleScene - PC, Mac & Linux Standalone - Unity 2020.1.0a12.1360 Personal [PREVIEW PACKAGES IN USE] _DX11_ 2021-02-02 13-27-11.mp4
+
+<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="40" height="40" />
+
 ```
 $ cd ../lorem
 $ npm install
